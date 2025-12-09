@@ -1,5 +1,5 @@
 public interface Defender {
 
-    void levantarEscudo(double dano);
+    void levantarEscudo();
 
 }

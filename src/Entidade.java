@@ -3,6 +3,7 @@ public abstract class Entidade {
     protected double vida;
     protected double ataque;
 
+    protected boolean defendendo = false;
 
     public Entidade(double vida, double ataque) {
         this.vida = vida;
@@ -15,8 +16,11 @@ public abstract class Entidade {
         return quantDano;
     }
 
-    public void receberDano(double ataque){
-        setVida(getVida() - ataque);
+    public void receberDano(double dano){
+        if (defendendo){
+            dano /= 2;
+        }
+        setVida(getVida() - dano);
     }
 
     public double getVida() {
@@ -29,6 +33,14 @@ public abstract class Entidade {
 
     public double getAtaque() {
         return ataque;
+    }
+
+    public boolean isDefendendo() {
+        return defendendo;
+    }
+
+    public void setDefendendo(boolean defendendo) {
+        this.defendendo = defendendo;
     }
 
 }

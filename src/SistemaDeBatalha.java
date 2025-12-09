@@ -42,7 +42,7 @@ public class SistemaDeBatalha {
             case 2:
                 System.out.println("A maquina escolheu levantar escudo");
                 if (maquina instanceof Defender) {
-                    ((Defender) maquina).levantarEscudo(dano);
+                    ((Defender) maquina).levantarEscudo();
                 }
                 break;
             case 3:
@@ -105,7 +105,7 @@ public class SistemaDeBatalha {
                     break;
                 case 2:
                     if (jogador instanceof Defender) {
-                        ((Defender) jogador).levantarEscudo(dano);
+                        ((Defender) jogador).levantarEscudo();
                     } else {
                         System.out.println("Falhou");
                     }

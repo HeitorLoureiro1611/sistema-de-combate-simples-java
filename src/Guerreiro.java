@@ -5,9 +5,9 @@ public class Guerreiro extends Entidade implements Defender, HabilidadeEspecial{
     }
 
     @Override
-    public void levantarEscudo(double dano) {
-        System.out.println("Se defendeu com escudo, reduziu " + dano/2 + " de dano");
-        receberDano(dano/2);
+    public void levantarEscudo() {
+        System.out.println("Levantou o escudo!!\nDano reduzido pela metade");
+        setDefendendo(true);
     }
 
     @Override
