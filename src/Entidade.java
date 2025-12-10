@@ -18,9 +18,12 @@ public abstract class Entidade {
 
     public void receberDano(double dano){
         if (defendendo){
-            dano /= 2;
+            setVida(getVida() - dano/2);
+
+        }else {
+            setVida(getVida() - dano);
+            setDefendendo(false);
         }
-        setVida(getVida() - dano);
     }
 
     public double getVida() {
